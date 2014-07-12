@@ -9,11 +9,11 @@ payoff = np.array([[[4, 4], [0, 3]], [[3, 0], [2, 2]]]) # payoff table
 N = 10 # the number of players
 times = 100000 # the number of repetitions
 epsilon = 0.1 # the probability to become mutated
-x_0 = 0 # x_t means the number of players playing action1 at tine t
+x_0 = 0 # x_t means the number of players playing action1 at time t
 
 payoff_0 = np.array([[payoff[0, 0, 0], payoff[0, 1, 0]], [payoff[1, 0, 0], payoff[1, 1, 0]]]) # payoff matrix for player 0
 
-# setting up trasnsitive matrix A
+# setting up transitive matrix A
 A = np.zeros([N+1, N+1]) 
 A[0, 0] = 1 - epsilon*0.5
 A[0, 1] = epsilon*0.5
